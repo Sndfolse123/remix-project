@@ -78,10 +78,10 @@ export const RemixUIGridCell = (props: RemixUIGridCellProps) => {
         </div>
         { filterCon.showPin && <button
           className={`${pinned ? 'fa-duotone' : 'fa-light'}` + ` fa-map-pin text-info border-0 mb-0 remixui_grid_cell_pin`}
-         onClick={() => {
-          setPinned(!pinned)
-          props.pinStateCallback()
-        }}
+          onClick={() => {
+            setPinned(!pinned)
+            props.pinStateCallback()
+          }}
         ></button>}
         { props.tagList && <div className='d-flex flex-column align-items-begin remixui_grid_cell_tags'>
           { Object.keys(props.tagList).map((key) => (
@@ -94,19 +94,14 @@ export const RemixUIGridCell = (props: RemixUIGridCellProps) => {
               >
                 <span key={props.tagList[key]}
                   className={'remixui_grid_cell_tag bg-' + filterCon.keyValueMap[props.tagList[key]].color}
-                >
-                  <span key={props.tagList[key]}
-                    className={'remixui_grid_cell_tag bg-' + filterCon.keyValueMap[props.tagList[key]].color}
-                  >
-                  </span>
-                </CustomTooltip>
-              )
-            )) }
-          </div> }
-          { !props.tagList && <span
-            className={'remixui_grid_cell_tags'}>
-          </span> }
-        </div>
+                ></span>
+              </CustomTooltip>
+            )
+          )) }
+        </div>}
+        { !props.tagList && <span
+          className={'remixui_grid_cell_tags'}>
+        </span> }
         { expand && <div>
           { props.expandViewEl }
         </div>

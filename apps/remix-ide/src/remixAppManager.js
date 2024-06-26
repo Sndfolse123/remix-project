@@ -78,7 +78,7 @@ let requiredModules = [ // services + layout views + system views
   'doc-gen',
   'remix-templates',
   'solhint',
-  'walletconnect'
+  'walletconnect',
   'pinnedPanel',
   'pluginStateLogger',
   'remixGuide'
