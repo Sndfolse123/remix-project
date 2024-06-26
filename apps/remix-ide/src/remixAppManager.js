@@ -84,8 +84,6 @@ let requiredModules = [ // services + layout views + system views
   'remixGuide'
 ]
 
-
-
 // dependentModules shouldn't be manually activated (e.g hardhat is activated by remixd)
 const dependentModules = ['foundry', 'hardhat', 'truffle', 'slither']
 
